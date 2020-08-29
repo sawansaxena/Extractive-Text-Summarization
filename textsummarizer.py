@@ -6,6 +6,7 @@ Created on Wed Aug 26 07:34:08 2020
 """
 
 #Importing required libraries
+import nltk
 from nltk.corpus import stopwords
 from nltk.cluster.util import cosine_distance
 from nltk.tokenize import sent_tokenize
