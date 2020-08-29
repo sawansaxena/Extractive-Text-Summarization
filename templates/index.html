@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+    		<h2>Text summarization based on extractive method</h2>	
+    	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('summarize')}}" method="POST">
+    		<p>Enter the original text here</p>
+    		<textarea name="originalText" id="org-text" rows="6" cols="50" required></textarea>
+    		<br/>
+    		<p>Enter the number of lines in summary</p>
+    		<input name="numOfLines" type="text"></input>
+    		<input type="submit" class="btn-info" value="Summarize">
+		
+    	</form>
+		
+	</div>
+
+</body>
+</html>
