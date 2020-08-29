@@ -80,6 +80,8 @@ def build_similarity_matrix(sentences,stop_words):
 def generate_summary(text,top_n):
     
     nltk.download('stopwords')
+    nltk.download('punkt')
+    
     stop_words = stopwords.words('english')
     summarize_text = []
     
